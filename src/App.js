@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ProfileCard from "./components/ProfileCard";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ textAlign: "center", padding: "20px" }}>
+      <h1>Profile Cards</h1>
+      {/* Example Usage of ProfileCard */}
+      <ProfileCard
+        name="John Doe"
+        image="https://via.placeholder.com/100"
+        description="Software Engineer with a passion for building web applications."
+      />
+      <ProfileCard
+        name="Jane Smith"
+        image="https://via.placeholder.com/100"
+        description="Graphic Designer who loves creating stunning visuals."
+      />
     </div>
   );
-}
+};
 
 export default App;
